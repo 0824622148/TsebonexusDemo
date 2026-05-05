@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { asset } from '../constants'
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -55,7 +56,7 @@ export default function Navbar() {
           <Link to="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
             <div style={{ width: '210px', height: '58px', overflow: 'hidden', position: 'relative' }}>
               <img
-                src="/logo-nobg.png"
+                src={asset('logo-nobg.png')}
                 alt="TseboNexus"
                 style={{
                   position: 'absolute',

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
+import { asset } from '../constants'
 
 const LinkedinIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -56,7 +57,7 @@ export default function Footer() {
           <div>
             <div style={{ width: '200px', height: '56px', overflow: 'hidden', position: 'relative', marginBottom: '1rem' }}>
               <img
-                src="/logo-nobg.png"
+                src={asset('logo-nobg.png')}
                 alt="TseboNexus"
                 style={{
                   position: 'absolute',

@@ -1,3 +1,6 @@
+// Resolves public/ asset paths correctly in both dev and GitHub Pages deployment
+export const asset = (filename) => `${import.meta.env.BASE_URL}${filename}`
+
 // Replace with actual WhatsApp number before go-live (e.g. '27821234567')
 export const WHATSAPP_NUMBER = '27XXXXXXXXXX';
 

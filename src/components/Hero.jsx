@@ -1,4 +1,5 @@
 import { ArrowRight, Shield } from 'lucide-react'
+import { asset } from '../constants'
 
 const DOTS = [
   { size: 220, top: '8%',  left: '75%', color: '#3FC1AE', delay: '0s',   cls: 'animate-float-slow' },
@@ -166,7 +167,7 @@ export default function Hero() {
               width: '100%',
             }}>
               <img
-                src="/security-dashboard.jpg"
+                src={asset('security-dashboard.jpg')}
                 alt="Security Dashboard"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
