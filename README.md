@@ -14,3 +14,10 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Proposed redesign (September 2026)
+
+`proposed-2026-09/` is a self-contained static export of the proposed new design (Claude Design
+export + optimized images + a small mobile stylesheet). It is **not approved yet** and must not be
+uploaded to tsebonexus.co.za. It is published for client review at
+https://0824622148.github.io/TsebonexusDemo/ via `npm run deploy:proposed`.
