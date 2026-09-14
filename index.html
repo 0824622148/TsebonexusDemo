@@ -40,6 +40,7 @@
     .tn-hero-body h1 { font-size: clamp(34px, 9vw, 44px) !important; }
     .tn-hero-body p { font-size: 17px !important; }
     .tn-vlabel { display: none !important; }
+    .tn-dots { display: none !important; } /* masked dot overlays are paint-heavy on phones */
     .tn-split { grid-template-columns: minmax(0, 1fr) !important; min-height: auto !important; gap: 32px !important; }
     .tn-split-text { padding: 56px 20px !important; max-width: none !important; margin-left: 0 !important; }
     .tn-split-text > div { padding-left: 0 !important; }
@@ -96,7 +97,7 @@
     </div>
     <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(8,27,58,0.96) 0%,rgba(8,27,58,0.92) 28%,rgba(8,27,58,0.72) 46%,rgba(8,27,58,0.42) 64%,rgba(8,27,58,0.3) 82%,rgba(8,27,58,0.42) 100%)"></div>
     <sc-if value="{{ showNodePattern }}" hint-placeholder-val="{{ true }}">
-      <div style="position:absolute;inset:0;pointer-events:none;opacity:0.16;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(60% 70% at 18% 60%,#000,transparent)"></div>
+      <div class="tn-dots" style="position:absolute;inset:0;pointer-events:none;opacity:0.16;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(60% 70% at 18% 60%,#000,transparent)"></div>
     </sc-if>
 
     <div class="tn-hero-body" style="position:relative;z-index:3;max-width:1280px;margin:0 auto;padding:150px 40px 90px;width:100%">
@@ -227,7 +228,7 @@
   <!-- ══ INDUSTRIES ══ -->
   <section id="industries" class="tn-pad" style="position:relative;background:#050F24;padding:100px 0;overflow:hidden">
     <sc-if value="{{ showNodePattern }}" hint-placeholder-val="{{ true }}">
-      <div style="position:absolute;inset:0;pointer-events:none;opacity:0.14;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(50% 90% at 8% 50%,#000,transparent)"></div>
+      <div class="tn-dots" style="position:absolute;inset:0;pointer-events:none;opacity:0.14;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(50% 90% at 8% 50%,#000,transparent)"></div>
     </sc-if>
     <div class="tn-wrap tn-split" style="position:relative;max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:minmax(260px,0.8fr) minmax(0,2fr);gap:56px;align-items:center">
       <div>
@@ -302,7 +303,7 @@
   <!-- ══ INSIGHTS ══ -->
   <section id="insights" class="tn-pad" style="position:relative;background:#050F24;padding:96px 0 104px;overflow:hidden">
     <sc-if value="{{ showNodePattern }}" hint-placeholder-val="{{ true }}">
-      <div style="position:absolute;inset:0;pointer-events:none;opacity:0.12;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(60% 80% at 85% 20%,#000,transparent)"></div>
+      <div class="tn-dots" style="position:absolute;inset:0;pointer-events:none;opacity:0.12;background-image:radial-gradient(#6FD8DF 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(60% 80% at 85% 20%,#000,transparent)"></div>
     </sc-if>
     <div class="tn-wrap" style="position:relative;max-width:1280px;margin:0 auto;padding:0 40px">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
