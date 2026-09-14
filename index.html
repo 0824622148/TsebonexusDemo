@@ -27,7 +27,14 @@
   @media (max-width: 900px) {
     .tn-header > div, .tn-wrap { padding-left: 20px !important; padding-right: 20px !important; }
     .tn-nav-links { display: none !important; }
+    .tn-nav-search { display: none !important; }
     .tn-nav-cta a { padding: 11px 14px !important; font-size: 12.5px !important; }
+    .tn-cta-long { display: none !important; }
+    .tn-cta-short { display: inline !important; }
+    .tn-partners { grid-template-columns: 1fr 1fr !important; gap: 26px 16px !important; margin-top: 24px !important; }
+    .tn-partner { padding: 2px 0 2px 14px !important; gap: 10px !important; }
+    .tn-partner:first-child { border-left: 2px solid #6FD8DF !important; }
+    .tn-partner span { font-size: 22px !important; }
     .tn-hero { min-height: auto !important; }
     .tn-hero-body { padding: 120px 20px 64px !important; }
     .tn-hero-body h1 { font-size: clamp(34px, 9vw, 44px) !important; }
@@ -39,12 +46,17 @@
     .tn-split-img { min-height: 300px !important; }
     .tn-cta-img > div { clip-path: none !important; }
     .tn-tile { height: 200px !important; }
+    .tn-tile:last-child:nth-child(odd) { grid-column: 1 / -1 !important; height: 170px !important; }
     .tn-pad { padding-top: 64px !important; padding-bottom: 72px !important; }
     h2 { font-size: clamp(28px, 7.5vw, 36px) !important; }
   }
   @media (max-width: 480px) {
-    .tn-nav-cta a { padding: 10px 12px !important; font-size: 12px !important; }
-    .tn-nav-cta a span { display: none !important; }
+    .tn-header { padding: 16px 0 !important; }
+    .tn-header > div { padding-left: 16px !important; padding-right: 16px !important; }
+    .tn-nav-cta a { padding: 10px 12px !important; font-size: 12px !important; gap: 6px !important; }
+    .tn-cta-short { display: inline !important; }
+    .tn-partners { gap: 22px 12px !important; }
+    .tn-partner span { font-size: 20px !important; }
   }
 </style>
 </helmet>
@@ -70,9 +82,9 @@
       </nav>
       <div class="tn-nav-cta" style="margin-left:auto;display:flex;align-items:center;gap:clamp(12px,1.6vw,24px);flex-shrink:0">
         <sc-if value="{{ showSearch }}" hint-placeholder-val="{{ true }}">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8FAFC" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+          <svg class="tn-nav-search" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8FAFC" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
         </sc-if>
-        <a href="#cta" style="background:#6FD8DF;color:#081B3A;font-size:13.5px;font-weight:700;padding:13px clamp(14px,1.6vw,22px);display:inline-flex;align-items:center;gap:10px;white-space:nowrap" style-hover="background:#83E7F0">Get a Free Security Review <span style="font-size:15px">→</span></a>
+        <a href="#cta" style="background:#6FD8DF;color:#081B3A;font-size:13.5px;font-weight:700;padding:13px clamp(14px,1.6vw,22px);display:inline-flex;align-items:center;gap:10px;white-space:nowrap" style-hover="background:#83E7F0"><span class="tn-cta-long">Get a Free Security Review</span><span class="tn-cta-short" style="display:none">Free Security Review</span> <span class="tn-cta-arrow" style="font-size:15px">→</span></a>
       </div>
     </div>
   </header>
@@ -115,20 +127,20 @@
   <section style="background:#F8FAFC;padding:44px 0 52px">
     <div class="tn-wrap" style="max-width:1280px;margin:0 auto;padding:0 40px">
       <div style="font-size:13px;font-weight:500;color:#5A6B85">Certified partners &amp; security vendors</div>
-      <div style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0">
-        <div style="padding:6px 32px 6px 24px;border-left:2px solid #6FD8DF;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
+      <div class="tn-partners" style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0">
+        <div class="tn-partner" style="padding:6px 32px 6px 24px;border-left:2px solid #6FD8DF;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
           <div style="height:28px;display:flex;align-items:center"><span style="font-size:26px;font-weight:700;letter-spacing:-0.02em;color:#081B3A;line-height:1">Bitdefender</span></div>
           <div style="font-size:12.5px;color:#5A6B85">Endpoint &amp; threat prevention</div>
         </div>
-        <div style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
+        <div class="tn-partner" style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
           <div style="height:28px;display:flex;align-items:center"><img src="./assets/partner-acronis.png" alt="Acronis" style="display:block;height:26px;width:auto;max-width:100%;object-fit:contain;object-position:left center"></div>
           <div style="font-size:12.5px;color:#5A6B85">Backup &amp; cyber protection</div>
         </div>
-        <div style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
+        <div class="tn-partner" style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
           <div style="height:28px;display:flex;align-items:center"><img src="./assets/partner-sendmarc.png" alt="Sendmarc" style="display:block;height:24px;width:auto;max-width:100%;object-fit:contain;object-position:left center"></div>
           <div style="font-size:12.5px;color:#5A6B85">Email authentication &amp; DMARC</div>
         </div>
-        <div style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
+        <div class="tn-partner" style="padding:6px 32px;border-left:1px solid #DDE4EE;display:flex;flex-direction:column;gap:14px;justify-content:flex-start">
           <div style="height:28px;display:flex;align-items:center"><img src="./assets/partner-zecurion.png" alt="Zecurion" style="display:block;height:24px;width:auto;max-width:100%;object-fit:contain;object-position:left center"></div>
           <div style="font-size:12.5px;color:#5A6B85">Data loss prevention</div>
         </div>
