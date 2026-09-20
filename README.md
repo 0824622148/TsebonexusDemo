@@ -19,6 +19,18 @@ Edit `site/index.html` directly. Contact details live in three places: the three
 Keep `site/.image-slots.state.json` (`{}`) — the image runtime fetches it on boot and logs a 404 if
 it is missing.
 
+## Insights articles
+
+Articles live at `site/insights/<slug>/index.html` with a listing at `site/insights/index.html`; all share
+`site/insights/article.css` and are plain HTML (no `support.js` runtime). Each page carries its own
+title/description/canonical/OG tags, Article JSON-LD, numbered `[n]` citations that link to a References
+list, a "How Tsebo Nexus helps" callout and the free-review CTA. Every statistic must trace to a URL in that
+article's References list.
+
+To add an article: copy an existing folder, use the card image from `site/uploads/`, add the card to
+`site/insights/index.html` and to the `#insights` section of `site/index.html`, and add the URL to
+`site/sitemap.xml`.
+
 ## Deploying
 
 ### Live (Plesk / IIS at hostserv.co.za)
