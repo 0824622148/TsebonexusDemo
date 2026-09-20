@@ -1,23 +1,51 @@
-# React + Vite
+# Tsebo Nexus website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static single-page site for **https://tsebonexus.co.za** (live since 20 Sep 2026). `site/` is the whole
+deployable: a Claude Design static export (`index.html` + `support.js`/`image-slot.js` runtime), optimised
+images in `uploads/`, partner logos in `assets/`, favicon set, `manifest.json` and an IIS `web.config`.
 
-Currently, two official plugins are available:
+The previous React/Vite site was retired at go-live; it is in git history up to commit `884df4c`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Working on the site
 
-## React Compiler
+```sh
+npm install
+npm run serve          # http://localhost:3000 — static preview of ./site
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Edit `site/index.html` directly. Contact details live in three places: the three "Free Review" buttons
+(WhatsApp `wa.me/27693389748`), the line under the CTA heading, and the footer (`tel:` / `mailto:`).
 
-## Expanding the ESLint configuration
+Keep `site/.image-slots.state.json` (`{}`) — the image runtime fetches it on boot and logs a 404 if
+it is missing.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deploying
 
-## Proposed redesign (September 2026)
+### Live (Plesk / IIS at hostserv.co.za)
 
-`proposed-2026-09/` is a self-contained static export of the proposed new design (Claude Design
-export + optimized images + a small mobile stylesheet). It is **not approved yet** and must not be
-uploaded to tsebonexus.co.za. It is published for client review at
-https://0824622148.github.io/TsebonexusDemo/ via `npm run deploy:proposed`.
+Credentials go in `.env` (git-ignored) — copy `.env.example`. The FTP account is chrooted straight
+into the tsebonexus.co.za web root, so `FTP_REMOTE_DIR=/`.
+
+```sh
+npm run deploy:live:list           # connect and print the remote tree (read-only)
+npm run deploy:live -- --dry-run   # list what would be uploaded, no connection
+npm run deploy:live                # remove old site files (keeps Plesk's .user.ini + App_Data), upload ./site
+```
+
+Each deploy writes a listing of the previous remote contents to `scratch/` (git-ignored).
+
+`site/web.config` is the Plesk-generated file (custom error pages, ASP.NET temp dir) with the static-site
+settings added at the top: default document, `.json`/`.svg` MIME types, 7-day asset cache
+(10 minutes for `index.html`), `nosniff` and `Referrer-Policy` headers. If Plesk regenerates
+`web.config` on the server, re-merge rather than overwrite.
+
+### Demo (GitHub Pages)
+
+`npm run deploy:demo` publishes the same `site/` folder to https://0824622148.github.io/TsebonexusDemo/.
+
+## Hosting notes
+
+- **SSL**: at go-live the domain was serving Plesk's default self-signed certificate (expired 2020).
+  Install a free Let's Encrypt certificate in Plesk (Websites & Domains → tsebonexus.co.za →
+  SSL/TLS Certificates), covering `www` as well, then enable the HTTP→HTTPS redirect + HSTS.
+- HTTP already 301s to HTTPS at the Plesk level; no rewrite rule is needed in `web.config`.

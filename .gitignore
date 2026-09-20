@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deploy credentials + local deploy artefacts
+.env
+scratch/

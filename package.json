@@ -5,34 +5,13 @@
   "type": "module",
   "homepage": "https://0824622148.github.io/TsebonexusDemo/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "deploy:proposed": "gh-pages -d proposed-2026-09 -t"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "autoprefixer": "^10.5.0",
-    "lucide-react": "^1.14.0",
-    "postcss": "^8.5.14",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-router-dom": "^7.14.2",
-    "tailwindcss": "^4.2.4"
+    "serve": "npx --yes serve site",
+    "deploy:live": "node scripts/deploy-live.mjs",
+    "deploy:live:list": "node scripts/deploy-live.mjs --list",
+    "deploy:demo": "gh-pages -d site"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^10.2.1",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "gh-pages": "^6.3.0",
-    "globals": "^17.5.0",
-    "vite": "^8.0.10"
+    "basic-ftp": "^6.2.1",
+    "gh-pages": "^6.3.0"
   }
 }
