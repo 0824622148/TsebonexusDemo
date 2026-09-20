@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tsebo Nexus — Proposed Website</title>
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" type="image/png" href="./assets/tsebo-nexus-mark.png">
+<title>Tsebo Nexus | Cybersecurity for South African Businesses</title>
+<meta name="description" content="Tsebo Nexus protects South African businesses with clear, no-noise cybersecurity — endpoint protection, data resilience and expert support. Book a free 30-minute Cyber Security Review.">
+<link rel="canonical" href="https://tsebonexus.co.za/">
+<meta name="theme-color" content="#081B3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tsebonexus.co.za/">
+<meta property="og:site_name" content="Tsebo Nexus">
+<meta property="og:title" content="Tsebo Nexus | Cybersecurity for South African Businesses">
+<meta property="og:description" content="Security today. Opportunity tomorrow. Get a free Cyber Security Review for your business.">
+<meta property="og:image" content="https://tsebonexus.co.za/uploads/hero-tsebo-nexus.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tsebo Nexus | Cybersecurity for South African Businesses">
+<meta name="twitter:description" content="Security today. Opportunity tomorrow. Get a free Cyber Security Review for your business.">
+<meta name="twitter:image" content="https://tsebonexus.co.za/uploads/hero-tsebo-nexus.jpg">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="manifest" href="./manifest.json">
 <!-- Static-export mode: stops the runtime re-fetching this page after boot, which would
      strip the data-filled marks image-slot.js sets and leave dashed placeholder rings visible. -->
 <script>window.__resources = {};</script>
@@ -62,12 +79,12 @@
 </style>
 </helmet>
 
-<div style="width:100%;overflow-x:hidden;color:#081B3A">
+<div id="top" style="width:100%;overflow-x:hidden;color:#081B3A">
 
   <!-- ══ NAV ══ -->
   <header class="tn-header" style="position:absolute;top:0;left:0;right:0;z-index:20;padding:22px 0">
     <div class="tn-wrap" style="max-width:1280px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:clamp(16px,2vw,40px)">
-      <a href="#" style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+      <a href="#top" style="display:flex;align-items:center;gap:12px;flex-shrink:0">
         <img src="./assets/tsebo-nexus-mark.png" alt="Tsebo Nexus" width="40" height="40" style="display:block;width:40px;height:40px;object-fit:contain">
         <span style="display:block;line-height:1.05">
           <span style="display:block;font-size:17px;font-weight:700;letter-spacing:0.16em;color:#F8FAFC">TSEBO</span>
@@ -82,10 +99,7 @@
         <a href="#cta" style="font-size:14px;font-weight:500;color:#F8FAFC">Contact</a>
       </nav>
       <div class="tn-nav-cta" style="margin-left:auto;display:flex;align-items:center;gap:clamp(12px,1.6vw,24px);flex-shrink:0">
-        <sc-if value="{{ showSearch }}" hint-placeholder-val="{{ true }}">
-          <svg class="tn-nav-search" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8FAFC" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
-        </sc-if>
-        <a href="#cta" style="background:#6FD8DF;color:#081B3A;font-size:13.5px;font-weight:700;padding:13px clamp(14px,1.6vw,22px);display:inline-flex;align-items:center;gap:10px;white-space:nowrap" style-hover="background:#83E7F0"><span class="tn-cta-long">Get a Free Security Review</span><span class="tn-cta-short" style="display:none">Free Security Review</span> <span class="tn-cta-arrow" style="font-size:15px">→</span></a>
+        <a href="https://wa.me/27693389748?text=Hi%2C%20I%27d%20like%20a%20free%20cyber%20security%20review%20for%20my%20business" target="_blank" rel="noopener" style="background:#6FD8DF;color:#081B3A;font-size:13.5px;font-weight:700;padding:13px clamp(14px,1.6vw,22px);display:inline-flex;align-items:center;gap:10px;white-space:nowrap" style-hover="background:#83E7F0"><span class="tn-cta-long">Get a Free Security Review</span><span class="tn-cta-short" style="display:none">Free Security Review</span> <span class="tn-cta-arrow" style="font-size:15px">→</span></a>
       </div>
     </div>
   </header>
@@ -93,7 +107,7 @@
   <!-- ══ HERO ══ -->
   <section class="tn-hero" style="position:relative;background:#081B3A;min-height:760px;display:flex;align-items:center;overflow:hidden">
     <div style="position:absolute;inset:0">
-      <image-slot id="tn-hero" shape="rect" fit="cover" src="./uploads/Hero Tsebo Nexus.jpg" placeholder="Hero — executive portrait, glass office, dusk"></image-slot>
+      <image-slot id="tn-hero" shape="rect" fit="cover" src="./uploads/hero-tsebo-nexus.jpg" placeholder="Hero — executive portrait, glass office, dusk"></image-slot>
     </div>
     <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(8,27,58,0.96) 0%,rgba(8,27,58,0.92) 28%,rgba(8,27,58,0.72) 46%,rgba(8,27,58,0.42) 64%,rgba(8,27,58,0.3) 82%,rgba(8,27,58,0.42) 100%)"></div>
     <sc-if value="{{ showNodePattern }}" hint-placeholder-val="{{ true }}">
@@ -105,7 +119,7 @@
       <h1 style="margin:26px 0 0;font-size:clamp(44px,5.6vw,82px);line-height:1.03;font-weight:800;letter-spacing:-0.03em;color:#F8FAFC;max-width:12em">Always On.<br>Always Protected.</h1>
       <p style="margin:30px 0 0;font-size:19px;line-height:1.65;font-weight:300;color:rgba(248,250,252,0.82);max-width:30em">Cybersecurity that works quietly in the background so South African businesses can focus on growth.</p>
       <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:46px">
-        <a href="#cta" style="background:#6FD8DF;color:#081B3A;font-size:15px;font-weight:700;padding:18px 30px;display:inline-flex;align-items:center;gap:12px" style-hover="background:#83E7F0">Get a Free Security Review <span style="font-size:17px">→</span></a>
+        <a href="https://wa.me/27693389748?text=Hi%2C%20I%27d%20like%20a%20free%20cyber%20security%20review%20for%20my%20business" target="_blank" rel="noopener" style="background:#6FD8DF;color:#081B3A;font-size:15px;font-weight:700;padding:18px 30px;display:inline-flex;align-items:center;gap:12px" style-hover="background:#83E7F0">Get a Free Security Review <span style="font-size:17px">→</span></a>
         <a href="#approach" style="display:inline-flex;align-items:center;gap:14px;color:#F8FAFC;font-size:15px;font-weight:500;white-space:nowrap">
           <span style="width:42px;height:42px;border:1px solid rgba(111,216,223,0.6);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#6FD8DF">▶</span>
           Explore Our Approach
@@ -160,7 +174,7 @@
       </div>
     </div>
     <div class="tn-split-img" style="position:relative;min-height:480px">
-      <image-slot id="tn-approach" shape="rect" fit="cover" src="./uploads/advisory conversation.jpg" placeholder="Boardroom / advisory conversation"></image-slot>
+      <image-slot id="tn-approach" shape="rect" fit="cover" src="./uploads/advisory-conversation.jpg" placeholder="Boardroom / advisory conversation"></image-slot>
       <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(237,242,248,0.9) 0%,rgba(237,242,248,0) 22%)"></div>
       <sc-if value="{{ showVerticalLabels }}" hint-placeholder-val="{{ true }}">
         <div class="tn-vlabel" style="position:absolute;right:34px;top:36px;pointer-events:none;font-size:10px;letter-spacing:0.2em;line-height:2.2;font-weight:600;color:rgba(248,250,252,0.92);text-transform:uppercase">
@@ -186,7 +200,7 @@
 
       <div style="margin-top:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px">
         <article style="border:1px solid #E3E9F2;background:#FFFFFF;display:flex;flex-direction:column" style-hover="border-color:#6FD8DF">
-          <div style="position:relative;height:190px"><image-slot id="tn-out-1" shape="rect" fit="cover" src="./uploads/Working On Laptop.jpg" placeholder="Person at laptop"></image-slot></div>
+          <div style="position:relative;height:190px"><image-slot id="tn-out-1" shape="rect" fit="cover" src="./uploads/working-on-laptop.jpg" placeholder="Person at laptop"></image-slot></div>
           <div style="padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;gap:14px">
             <div style="font-size:12px;font-weight:600;color:#2E7F8C;letter-spacing:0.1em">01</div>
             <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em;color:#081B3A">Work Without Disruption</h3>
@@ -195,7 +209,7 @@
           </div>
         </article>
         <article style="border:1px solid #E3E9F2;background:#FFFFFF;display:flex;flex-direction:column" style-hover="border-color:#6FD8DF">
-          <div style="position:relative;height:190px"><image-slot id="tn-out-2" shape="rect" fit="cover" src="./uploads/Data Protection.jpg" placeholder="Glass tower detail"></image-slot></div>
+          <div style="position:relative;height:190px"><image-slot id="tn-out-2" shape="rect" fit="cover" src="./uploads/data-protection.jpg" placeholder="Glass tower detail"></image-slot></div>
           <div style="padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;gap:14px">
             <div style="font-size:12px;font-weight:600;color:#2E7F8C;letter-spacing:0.1em">02</div>
             <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em;color:#081B3A">Keep Your Most Valuable Information Safe</h3>
@@ -204,7 +218,7 @@
           </div>
         </article>
         <article style="border:1px solid #E3E9F2;background:#FFFFFF;display:flex;flex-direction:column" style-hover="border-color:#6FD8DF">
-          <div style="position:relative;height:190px"><image-slot id="tn-out-3" shape="rect" fit="cover" src="./uploads/Team Meeting Standing.jpg" placeholder="Team meeting, standing"></image-slot></div>
+          <div style="position:relative;height:190px"><image-slot id="tn-out-3" shape="rect" fit="cover" src="./uploads/team-meeting-standing.jpg" placeholder="Team meeting, standing"></image-slot></div>
           <div style="padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;gap:14px">
             <div style="font-size:12px;font-weight:600;color:#2E7F8C;letter-spacing:0.1em">03</div>
             <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em;color:#081B3A">Recover Faster</h3>
@@ -213,7 +227,7 @@
           </div>
         </article>
         <article style="border:1px solid #E3E9F2;background:#FFFFFF;display:flex;flex-direction:column" style-hover="border-color:#6FD8DF">
-          <div style="position:relative;height:190px"><image-slot id="tn-out-4" shape="rect" fit="cover" src="./uploads/Upward architecture.jpg" placeholder="Upward architecture"></image-slot></div>
+          <div style="position:relative;height:190px"><image-slot id="tn-out-4" shape="rect" fit="cover" src="./uploads/upward-architecture.jpg" placeholder="Upward architecture"></image-slot></div>
           <div style="padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;gap:14px">
             <div style="font-size:12px;font-weight:600;color:#2E7F8C;letter-spacing:0.1em">04</div>
             <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em;color:#081B3A">Stay In Control</h3>
@@ -239,63 +253,30 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px">
         <a href="#industries" class="tn-tile" style="position:relative;display:block;height:290px;overflow:hidden">
-          <image-slot id="tn-ind-1" shape="rect" fit="cover" src="./uploads/Professional Services.jpg" placeholder="Professional services"></image-slot>
+          <image-slot id="tn-ind-1" shape="rect" fit="cover" src="./uploads/professional-services.jpg" placeholder="Professional services"></image-slot>
           <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,36,0.25) 40%,rgba(5,15,36,0.9) 100%)"></div>
           <div style="position:absolute;left:16px;right:16px;bottom:18px;pointer-events:none;color:#F8FAFC;font-size:14px;font-weight:600;line-height:1.35">Professional Services<div style="margin-top:8px;color:#6FD8DF">→</div></div>
         </a>
         <a href="#industries" class="tn-tile" style="position:relative;display:block;height:290px;overflow:hidden">
-          <image-slot id="tn-ind-2" shape="rect" fit="cover" src="./uploads/Manufacturing.jpg" placeholder="Manufacturing"></image-slot>
+          <image-slot id="tn-ind-2" shape="rect" fit="cover" src="./uploads/manufacturing.jpg" placeholder="Manufacturing"></image-slot>
           <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,36,0.25) 40%,rgba(5,15,36,0.9) 100%)"></div>
           <div style="position:absolute;left:16px;right:16px;bottom:18px;pointer-events:none;color:#F8FAFC;font-size:14px;font-weight:600;line-height:1.35">Manufacturing<div style="margin-top:8px;color:#6FD8DF">→</div></div>
         </a>
         <a href="#industries" class="tn-tile" style="position:relative;display:block;height:290px;overflow:hidden">
-          <image-slot id="tn-ind-3" shape="rect" fit="cover" src="./uploads/Healthcare.jpg" placeholder="Healthcare"></image-slot>
+          <image-slot id="tn-ind-3" shape="rect" fit="cover" src="./uploads/healthcare.jpg" placeholder="Healthcare"></image-slot>
           <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,36,0.25) 40%,rgba(5,15,36,0.9) 100%)"></div>
           <div style="position:absolute;left:16px;right:16px;bottom:18px;pointer-events:none;color:#F8FAFC;font-size:14px;font-weight:600;line-height:1.35">Healthcare<div style="margin-top:8px;color:#6FD8DF">→</div></div>
         </a>
         <a href="#industries" class="tn-tile" style="position:relative;display:block;height:290px;overflow:hidden">
-          <image-slot id="tn-ind-4" shape="rect" fit="cover" src="./uploads/Education.jpg" placeholder="Education"></image-slot>
+          <image-slot id="tn-ind-4" shape="rect" fit="cover" src="./uploads/education.jpg" placeholder="Education"></image-slot>
           <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,36,0.25) 40%,rgba(5,15,36,0.9) 100%)"></div>
           <div style="position:absolute;left:16px;right:16px;bottom:18px;pointer-events:none;color:#F8FAFC;font-size:14px;font-weight:600;line-height:1.35">Education<div style="margin-top:8px;color:#6FD8DF">→</div></div>
         </a>
         <a href="#industries" class="tn-tile" style="position:relative;display:block;height:290px;overflow:hidden">
-          <image-slot id="tn-ind-5" shape="rect" fit="cover" src="./uploads/Retail and Wholesale.jpg" placeholder="Retail &amp; wholesale"></image-slot>
+          <image-slot id="tn-ind-5" shape="rect" fit="cover" src="./uploads/retail-and-wholesale.jpg" placeholder="Retail &amp; wholesale"></image-slot>
           <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,36,0.25) 40%,rgba(5,15,36,0.9) 100%)"></div>
           <div style="position:absolute;left:16px;right:16px;bottom:18px;pointer-events:none;color:#F8FAFC;font-size:14px;font-weight:600;line-height:1.35">Retail &amp; Wholesale<div style="margin-top:8px;color:#6FD8DF">→</div></div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ CLIENT STORIES ══ -->
-  <section class="tn-pad" style="background:#F8FAFC;padding:100px 0 110px">
-    <div class="tn-wrap" style="max-width:1280px;margin:0 auto;padding:0 40px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
-        <div>
-          <div style="font-size:11.5px;font-weight:600;letter-spacing:0.22em;color:#2E7F8C;text-transform:uppercase">Client Stories</div>
-          <h2 style="margin:22px 0 0;font-size:clamp(30px,3.4vw,46px);line-height:1.1;font-weight:700;letter-spacing:-0.025em;color:#081B3A">Real businesses.<br>Real peace of mind.</h2>
-        </div>
-        <a href="#" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#146C7A;padding-bottom:8px">View all client stories <span>→</span></a>
-      </div>
-      <div style="margin-top:52px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
-        <figure style="margin:0;background:#FFFFFF;border:1px solid #E3E9F2;padding:30px 30px 34px">
-          <div style="padding-left:14px;border-left:2px solid #6FD8DF;font-size:15px;font-weight:700;color:#081B3A">Accounting Firm</div>
-          <p style="margin:18px 0 0;font-size:14.5px;line-height:1.7;font-weight:300;color:#41506A">45 endpoints across 3 offices secured and managed.</p>
-          <blockquote style="margin:24px 0 0;font-size:15.5px;line-height:1.65;color:#081B3A;font-weight:400">“Tsebo Nexus gave us peace of mind. We can focus on our clients knowing our systems are protected.”</blockquote>
-          <figcaption style="margin-top:22px;font-size:13px;color:#5A6B85">— Practice Manager</figcaption>
-        </figure>
-        <figure style="margin:0;background:#FFFFFF;border:1px solid #E3E9F2;padding:30px 30px 34px">
-          <div style="padding-left:14px;border-left:2px solid #6FD8DF;font-size:15px;font-weight:700;color:#081B3A">Manufacturing Company</div>
-          <p style="margin:18px 0 0;font-size:14.5px;line-height:1.7;font-weight:300;color:#41506A">Reduced security incidents by 92%.</p>
-          <blockquote style="margin:24px 0 0;font-size:15.5px;line-height:1.65;color:#081B3A;font-weight:400">“The team is proactive, responsive and easy to work with. A true partner in our business.”</blockquote>
-          <figcaption style="margin-top:22px;font-size:13px;color:#5A6B85">— IT Manager</figcaption>
-        </figure>
-        <figure style="margin:0;background:#FFFFFF;border:1px solid #E3E9F2;padding:30px 30px 34px">
-          <div style="padding-left:14px;border-left:2px solid #6FD8DF;font-size:15px;font-weight:700;color:#081B3A">Legal Practice</div>
-          <p style="margin:18px 0 0;font-size:14.5px;line-height:1.7;font-weight:300;color:#41506A">Achieved compliant backup and recovery.</p>
-          <blockquote style="margin:24px 0 0;font-size:15.5px;line-height:1.65;color:#081B3A;font-weight:400">“Simple, effective and reliable. Exactly what we needed.”</blockquote>
-          <figcaption style="margin-top:22px;font-size:13px;color:#5A6B85">— Managing Partner</figcaption>
-        </figure>
       </div>
     </div>
   </section>
@@ -311,26 +292,22 @@
           <div style="font-size:11.5px;font-weight:600;letter-spacing:0.22em;color:#6FD8DF;text-transform:uppercase">Insights</div>
           <h2 style="margin:22px 0 0;font-size:clamp(30px,3.4vw,46px);line-height:1.1;font-weight:700;letter-spacing:-0.025em;color:#F8FAFC">Ideas for a<br>more secure tomorrow.</h2>
         </div>
-        <a href="#insights" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#6FD8DF;padding-bottom:8px">View all insights <span>→</span></a>
       </div>
       <div style="margin-top:52px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px">
         <article>
-          <div style="position:relative;height:210px"><image-slot id="tn-ins-1" shape="rect" fit="cover" src="./uploads/The Cost of Downtime for South African SMEs.jpg" placeholder="Empty corridor / infrastructure"></image-slot></div>
+          <div style="position:relative;height:210px"><image-slot id="tn-ins-1" shape="rect" fit="cover" src="./uploads/the-cost-of-downtime-for-south-african-smes.jpg" placeholder="Empty corridor / infrastructure"></image-slot></div>
           <div style="margin-top:22px;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#6FD8DF">12 MAR 2026</div>
           <h3 style="margin:14px 0 0;font-size:20px;line-height:1.32;font-weight:600;color:#F8FAFC">The Cost of Downtime for South African SMEs</h3>
-          <a href="#insights" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#6FD8DF">Read article <span>→</span></a>
         </article>
         <article>
-          <div style="position:relative;height:210px"><image-slot id="tn-ins-2" shape="rect" fit="cover" src="./uploads/Why Antivirus Alone Isn't Enough in 2026.jpg" placeholder="Analyst at monitor, night"></image-slot></div>
+          <div style="position:relative;height:210px"><image-slot id="tn-ins-2" shape="rect" fit="cover" src="./uploads/why-antivirus-alone-isnt-enough-in-2026.jpg" placeholder="Analyst at monitor, night"></image-slot></div>
           <div style="margin-top:22px;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#6FD8DF">5 MAR 2026</div>
           <h3 style="margin:14px 0 0;font-size:20px;line-height:1.32;font-weight:600;color:#F8FAFC">Why Antivirus Alone Isn't Enough in 2026</h3>
-          <a href="#insights" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#6FD8DF">Read article <span>→</span></a>
         </article>
         <article>
-          <div style="position:relative;height:210px"><image-slot id="tn-ins-3" shape="rect" fit="cover" src="./uploads/How to Prepare for Ransomware Before It Happens.jpg" placeholder="Landscape / horizon"></image-slot></div>
+          <div style="position:relative;height:210px"><image-slot id="tn-ins-3" shape="rect" fit="cover" src="./uploads/how-to-prepare-for-ransomware-before-it-happens.jpg" placeholder="Landscape / horizon"></image-slot></div>
           <div style="margin-top:22px;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#6FD8DF">28 FEB 2026</div>
           <h3 style="margin:14px 0 0;font-size:20px;line-height:1.32;font-weight:600;color:#F8FAFC">How to Prepare for Ransomware Before It Happens</h3>
-          <a href="#insights" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#6FD8DF">Read article <span>→</span></a>
         </article>
       </div>
     </div>
@@ -342,12 +319,13 @@
       <div style="padding-left:40px">
         <h2 style="margin:0;font-size:clamp(30px,3.4vw,46px);line-height:1.1;font-weight:700;letter-spacing:-0.025em;color:#081B3A">Get your free<br>Cyber Security Review.</h2>
         <p style="margin:26px 0 0;font-size:16.5px;line-height:1.7;font-weight:300;color:#41506A;max-width:34em">In 30 minutes, we'll assess your current security posture and show you exactly where you're exposed — at no cost, no pressure.</p>
-        <a href="#cta" style="margin-top:38px;background:#6FD8DF;color:#081B3A;font-size:15px;font-weight:700;padding:17px 28px;display:inline-flex;align-items:center;gap:12px" style-hover="background:#83E7F0">Book My Free Review <span style="font-size:17px">→</span></a>
+        <a href="https://wa.me/27693389748?text=Hi%2C%20I%27d%20like%20a%20free%20cyber%20security%20review%20for%20my%20business" target="_blank" rel="noopener" style="margin-top:38px;background:#6FD8DF;color:#081B3A;font-size:15px;font-weight:700;padding:17px 28px;display:inline-flex;align-items:center;gap:12px" style-hover="background:#83E7F0">Book My Free Review <span style="font-size:17px">→</span></a>
+        <p style="margin:26px 0 0;font-size:14.5px;line-height:1.8;color:#41506A">Or reach us directly: <a href="tel:+27693389748" style="color:#081B3A;font-weight:600;border-bottom:1px solid #6FD8DF">069 338 9748</a> <span style="margin:0 8px;color:#6FD8DF">·</span> <a href="mailto:info@tsebonexus.co.za" style="color:#081B3A;font-weight:600;border-bottom:1px solid #6FD8DF">info@tsebonexus.co.za</a></p>
       </div>
     </div>
     <div class="tn-split-img tn-cta-img" style="position:relative;min-height:400px;background:#050F24">
       <div style="position:absolute;inset:0;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)">
-        <image-slot id="tn-cta" shape="rect" fit="cover" src="./uploads/Safer South Africa.jpg" placeholder="Corporate tower, low angle"></image-slot>
+        <image-slot id="tn-cta" shape="rect" fit="cover" src="./uploads/safer-south-africa.jpg" placeholder="Corporate tower, low angle"></image-slot>
         <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(5,15,36,0.75),rgba(5,15,36,0.45))"></div>
       </div>
       <div class="tn-vlabel" style="position:absolute;right:40px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:10.5px;letter-spacing:0.2em;line-height:2.1;font-weight:600;color:#F8FAFC;text-transform:uppercase">
@@ -361,7 +339,7 @@
   <footer style="background:#081B3A;padding:46px 0 34px">
     <div class="tn-wrap" style="max-width:1280px;margin:0 auto;padding:0 40px">
       <div style="display:flex;align-items:center;gap:48px;flex-wrap:wrap">
-        <a href="#" style="display:flex;align-items:center;gap:12px">
+        <a href="#top" style="display:flex;align-items:center;gap:12px">
           <img src="./assets/tsebo-nexus-mark.png" alt="Tsebo Nexus" width="38" height="38" style="display:block;width:38px;height:38px;object-fit:contain">
           <span style="display:block;line-height:1.05">
             <span style="display:block;font-size:16px;font-weight:700;letter-spacing:0.16em;color:#F8FAFC">TSEBO</span>
@@ -375,10 +353,9 @@
           <a href="#approach" style="font-size:13.5px;font-weight:500;color:rgba(248,250,252,0.85)">About</a>
           <a href="#cta" style="font-size:13.5px;font-weight:500;color:rgba(248,250,252,0.85)">Contact</a>
         </nav>
-        <div style="margin-left:auto;display:flex;gap:20px;align-items:center">
-          <a href="#" aria-label="LinkedIn" style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#6FD8DF">in</a>
-          <a href="#" aria-label="X" style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#6FD8DF">X</a>
-          <a href="#" aria-label="YouTube" style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#6FD8DF">YT</a>
+        <div style="margin-left:auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+          <a href="tel:+27693389748" style="font-size:13.5px;font-weight:600;color:#6FD8DF">069 338 9748</a>
+          <a href="mailto:info@tsebonexus.co.za" style="font-size:13.5px;font-weight:600;color:#6FD8DF">info@tsebonexus.co.za</a>
         </div>
       </div>
       <div style="margin-top:36px;padding-top:22px;border-top:1px solid rgba(248,250,252,0.12);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
