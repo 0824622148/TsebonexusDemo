@@ -1,6 +1,8 @@
 # Tsebo Nexus website
 
-Static single-page site for **https://tsebonexus.co.za** (live since 20 Sep 2026). `site/` is the whole
+Static single-page site for **https://tsebo-nexus.co.za** (GitHub Pages, DNS at GoDaddy; moved there
+8 Oct 2026 from tsebonexus.co.za, which is on a Plesk host we don't control). The contact email is still
+`info@tsebonexus.co.za`. `site/` is the whole
 deployable: a Claude Design static export (`index.html` + `support.js`/`image-slot.js` runtime), optimised
 images in `uploads/`, partner logos in `assets/`, favicon set, `manifest.json` and an IIS `web.config`.
 
@@ -33,7 +35,18 @@ To add an article: copy an existing folder, use the card image from `site/upload
 
 ## Deploying
 
-### Live (Plesk / IIS at hostserv.co.za)
+### Live (GitHub Pages → https://tsebo-nexus.co.za)
+
+```sh
+npm run deploy         # publishes ./site to the gh-pages branch of 0824622148/TsebonexusDemo
+```
+
+The script adds `CNAME` (tsebo-nexus.co.za) and `.nojekyll`, and includes dotfiles so
+`.image-slots.state.json` is published. GoDaddy DNS: four `A @` records → `185.199.108.153`,
+`185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `CNAME www` → `0824622148.github.io`.
+HTTPS is GitHub's certificate ("Enforce HTTPS" in repo Settings → Pages). `web.config` is ignored on Pages.
+
+### Legacy: Plesk / IIS at hostserv.co.za (old tsebonexus.co.za)
 
 Credentials go in `.env` (git-ignored) — copy `.env.example`. The FTP account is chrooted straight
 into the tsebonexus.co.za web root, so `FTP_REMOTE_DIR=/`.
@@ -50,10 +63,6 @@ Each deploy writes a listing of the previous remote contents to `scratch/` (git-
 settings added at the top: default document, `.json`/`.svg` MIME types, 7-day asset cache
 (10 minutes for `index.html`), `nosniff` and `Referrer-Policy` headers. If Plesk regenerates
 `web.config` on the server, re-merge rather than overwrite.
-
-### Demo (GitHub Pages)
-
-`npm run deploy:demo` publishes the same `site/` folder to https://0824622148.github.io/TsebonexusDemo/.
 
 ## Hosting notes
 

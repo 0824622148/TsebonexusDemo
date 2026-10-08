@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://0824622148.github.io/TsebonexusDemo/",
+  "homepage": "https://tsebo-nexus.co.za/",
   "scripts": {
     "serve": "npx --yes serve site",
     "deploy:live": "node scripts/deploy-live.mjs",
     "deploy:live:list": "node scripts/deploy-live.mjs --list",
-    "deploy:demo": "gh-pages -d site"
+    "deploy": "gh-pages -d site --dotfiles --nojekyll --cname tsebo-nexus.co.za",
+    "deploy:demo": "npm run deploy"
   },
   "devDependencies": {
     "basic-ftp": "^6.2.1",
