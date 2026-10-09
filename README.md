@@ -15,8 +15,22 @@ npm install
 npm run serve          # http://localhost:3000 — static preview of ./site
 ```
 
-Edit `site/index.html` directly. Contact details live in three places: the three "Free Review" buttons
-(WhatsApp `wa.me/27693389748`), the line under the CTA heading, and the footer (`tel:` / `mailto:`).
+Edit `site/index.html` directly. The nav, hero and CTA "Free Risk Assessment" buttons link to
+`./assessment/`. Contact details (`tel:` / `mailto:`) live in the line under the CTA heading and the footer.
+
+## Cyber Risk Assessment
+
+`site/assessment/index.html` is a self-contained page (plain HTML, styles from `insights/article.css` plus a
+page `<style>` block, inline vanilla JS). There are 10 questions from `Cyber Readiness Questions.docx`.
+Each radio's `data-points` holds its score (0–10), and each `<fieldset>`'s `data-area`/`data-advice` feed the
+"top 3 improvement areas". The score bands (High Risk 0–39, Developing 40–59, Moderate 60–79, Strong 80–100) and
+their recommended services are in the `BANDS` array in the script.
+
+Visitors give their contact details before seeing their score. The submission is emailed via
+[Web3Forms](https://web3forms.com): set `WEB3FORMS_KEY` at the top of the script (and the hidden
+`access_key` input, used when JS is off) to a key created with **info@tsebonexus.co.za**. Leads go to
+whichever address created the key. Results still show if sending fails, and the visitor is then pointed to
+the WhatsApp consultation button, which is prefilled with their score.
 
 Keep `site/.image-slots.state.json` (`{}`) — the image runtime fetches it on boot and logs a 404 if
 it is missing.
