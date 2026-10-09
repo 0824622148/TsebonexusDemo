@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Cyber Risk Assessment | Tsebo Nexus</title>
+<meta name="description" content="Answer 10 quick questions and get an instant cyber readiness score out of 100 for your South African business — plus your top 3 areas to improve. Free, from Tsebo Nexus.">
+<link rel="canonical" href="https://tsebo-nexus.co.za/assessment/">
+<meta name="theme-color" content="#081B3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tsebo-nexus.co.za/assessment/">
+<meta property="og:site_name" content="Tsebo Nexus">
+<meta property="og:title" content="Free Cyber Risk Assessment | Tsebo Nexus">
+<meta property="og:description" content="How exposed is your business? Get an instant cyber readiness score out of 100 and your top 3 areas to improve.">
+<meta property="og:image" content="https://tsebo-nexus.co.za/uploads/safer-south-africa.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Cyber Risk Assessment | Tsebo Nexus">
+<meta name="twitter:description" content="How exposed is your business? Get an instant cyber readiness score out of 100 and your top 3 areas to improve.">
+<meta name="twitter:image" content="https://tsebo-nexus.co.za/uploads/safer-south-africa.jpg">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../insights/article.css">
+<style>
+  /* ── Assessment page (layout tokens come from article.css) ── */
+  .tn-as-head { background: var(--navy); padding: 96px 0 120px; position: relative; overflow: hidden; }
+  .tn-as-head::before { content: ""; position: absolute; inset: 0; opacity: 0.14; background-image: radial-gradient(var(--teal) 1px, transparent 1px); background-size: 30px 30px; -webkit-mask-image: radial-gradient(60% 80% at 85% 40%, #000, transparent); mask-image: radial-gradient(60% 80% at 85% 40%, #000, transparent); pointer-events: none; }
+  .tn-as-head .tn-wrap { position: relative; }
+  .tn-as-head h1 { margin: 22px 0 0; font-size: clamp(34px, 4.2vw, 58px); line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: var(--paper); max-width: 14em; }
+  .tn-as-head p { margin: 22px 0 0; max-width: 38em; font-size: 18px; line-height: 1.65; font-weight: 300; color: rgba(248,250,252,0.85); }
+  .tn-as-meta { margin-top: 28px; display: flex; gap: 12px 28px; flex-wrap: wrap; font-size: 13.5px; font-weight: 600; color: var(--paper); }
+  .tn-as-meta span::before { content: "✓"; color: var(--teal); margin-right: 8px; }
+
+  .tn-as-body { background: var(--mist); padding: 0 0 96px; }
+  .tn-as-card { position: relative; max-width: 820px; margin: -64px auto 0; background: #FFFFFF; border-top: 3px solid var(--teal); box-shadow: 0 24px 60px -28px rgba(8,27,58,0.35); padding: 48px 56px 52px; }
+
+  .tn-progress { display: flex; align-items: center; gap: 18px; margin-bottom: 34px; }
+  .tn-progress .lbl { font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--body); white-space: nowrap; }
+  .tn-progress .bar { flex: 1; height: 4px; background: var(--mist); }
+  .tn-progress .bar i { display: block; height: 100%; width: 0; background: var(--teal); transition: width .3s ease; }
+
+  .tn-q { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .tn-q + .tn-q { margin-top: 48px; }
+  .tn-q legend { padding: 0; }
+  .tn-q .area { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #2A9BA3; }
+  .tn-q .ask { display: block; margin-top: 12px; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.3; font-weight: 700; letter-spacing: -0.015em; color: var(--navy); }
+  .tn-opts { margin-top: 26px; display: grid; gap: 10px; }
+  .tn-opt { position: relative; display: flex; align-items: center; gap: 16px; padding: 15px 18px; border: 1px solid var(--rule); background: #FFFFFF; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+  .tn-opt:hover { border-color: rgba(8,27,58,0.35); }
+  .tn-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .tn-opt .k { flex-shrink: 0; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule); font-size: 13px; font-weight: 700; color: var(--body); }
+  .tn-opt .t { font-size: 16px; line-height: 1.45; color: var(--navy); }
+  .tn-opt:has(input:checked) { border-color: var(--teal); background: rgba(111,216,223,0.1); box-shadow: inset 3px 0 0 var(--teal); }
+  .tn-opt:has(input:checked) .k { background: var(--teal); border-color: var(--teal); color: var(--navy); }
+  .tn-opt:has(input:focus-visible) { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+  .tn-step-contact h2 { margin: 0; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; font-weight: 700; letter-spacing: -0.015em; color: var(--navy); }
+  .tn-step-contact > p { margin: 10px 0 0; font-size: 15.5px; line-height: 1.6; font-weight: 300; color: var(--body); }
+  .tn-fields { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+  .tn-field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+  .tn-field label { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .tn-field label small { font-weight: 400; color: var(--body); }
+  .tn-field input, .tn-field select { font: inherit; font-size: 16px; color: var(--navy); padding: 13px 14px; border: 1px solid rgba(8,27,58,0.22); background: #FFFFFF; border-radius: 0; width: 100%; box-sizing: border-box; }
+  .tn-field input:focus, .tn-field select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(111,216,223,0.35); }
+  .tn-consent { margin-top: 22px; display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.55; color: var(--body); cursor: pointer; }
+  .tn-consent input { margin: 3px 0 0; width: 18px; height: 18px; accent-color: var(--navy); flex-shrink: 0; }
+  .tn-hp { position: absolute !important; left: -9999px !important; }
+
+  .tn-nav { margin-top: 38px; padding-top: 26px; border-top: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .tn-as-btn { font: inherit; border: 0; cursor: pointer; background: var(--teal); color: var(--navy); font-size: 15px; font-weight: 700; padding: 16px 26px; display: inline-flex; align-items: center; gap: 12px; }
+  .tn-as-btn:hover { background: var(--teal-hover); }
+  .tn-as-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .tn-back { font: inherit; border: 0; background: none; cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: var(--body); }
+  .tn-back:hover { color: var(--navy); }
+  .tn-back[hidden] { display: inline-block; visibility: hidden; }
+
+  /* Stepping only applies once JS has taken over; without JS every question shows stacked. */
+  .tn-as-form.js .tn-q, .tn-as-form.js .tn-step-contact { display: none; }
+  .tn-as-form.js .is-active { display: block; }
+  .tn-as-form:not(.js) .tn-progress { display: none; }
+  .tn-as-form:not(.js) .tn-step-contact { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--rule); }
+  .tn-as-form:not(.js) .tn-back, .tn-as-form:not(.js) [data-next] { display: none; }
+
+  /* ── Results ── */
+  .tn-result[hidden] { display: none; }
+  .tn-score { background: var(--navy); color: var(--paper); margin: -48px -56px 0; padding: 44px 56px 40px; }
+  .tn-score .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  .tn-score .row { margin-top: 18px; display: flex; align-items: flex-end; gap: 14px 28px; flex-wrap: wrap; }
+  .tn-score .num { font-size: clamp(64px, 9vw, 96px); line-height: 0.9; font-weight: 800; letter-spacing: -0.04em; }
+  .tn-score .num small { font-size: 0.32em; font-weight: 500; letter-spacing: 0; color: rgba(248,250,252,0.6); margin-left: 6px; }
+  .tn-band { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid currentColor; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+  .tn-band::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+  .tn-band.high { color: #FF7A7A; } .tn-band.developing { color: #FFAA5C; } .tn-band.moderate { color: #FFD666; } .tn-band.strong { color: #5BE3A4; }
+  .tn-scale { position: relative; margin-top: 30px; height: 8px; display: grid; grid-template-columns: 40fr 20fr 20fr 21fr; gap: 3px; }
+  .tn-scale span:nth-child(1) { background: #FF7A7A; } .tn-scale span:nth-child(2) { background: #FFAA5C; } .tn-scale span:nth-child(3) { background: #FFD666; } .tn-scale span:nth-child(4) { background: #5BE3A4; }
+  .tn-scale .pin { position: absolute; top: -6px; width: 4px; height: 20px; background: var(--paper); transform: translateX(-50%); box-shadow: 0 0 0 2px var(--navy); transition: left .8s cubic-bezier(.2,.8,.2,1); }
+  .tn-scale-lbl { margin-top: 10px; display: grid; grid-template-columns: 40fr 20fr 20fr 21fr; gap: 3px; font-size: 11px; font-weight: 500; color: rgba(248,250,252,0.55); }
+  .tn-score .summary { margin: 26px 0 0; font-size: 17px; line-height: 1.65; font-weight: 300; color: rgba(248,250,252,0.88); max-width: 40em; }
+
+  .tn-res-sec { margin-top: 40px; }
+  .tn-res-sec h3 { margin: 0 0 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--body); }
+  .tn-areas { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: a; }
+  .tn-areas li { counter-increment: a; display: grid; grid-template-columns: 44px 1fr; gap: 4px 16px; padding: 20px 22px; background: var(--paper); border-left: 3px solid var(--teal); }
+  .tn-areas li::before { content: counter(a); grid-row: span 2; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: var(--navy); color: var(--teal); font-weight: 700; font-size: 15px; }
+  .tn-areas strong { font-size: 17px; font-weight: 700; color: var(--navy); }
+  .tn-areas strong em { font-style: normal; font-weight: 500; font-size: 13px; color: var(--body); margin-left: 8px; }
+  .tn-areas p { margin: 0; font-size: 15.5px; line-height: 1.6; font-weight: 300; color: var(--body); }
+  .tn-none { margin: 0; padding: 20px 22px; background: var(--paper); border-left: 3px solid #2FB37A; font-size: 15.5px; line-height: 1.6; color: var(--body); }
+  .tn-action { font-size: 15.5px; line-height: 1.6; color: var(--body); margin: 0 0 14px; }
+  .tn-action strong { color: var(--navy); }
+  .tn-services { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .tn-services li { font-size: 13.5px; font-weight: 500; color: var(--navy); padding: 8px 12px; border: 1px solid var(--rule); background: #FFFFFF; }
+
+  .tn-next { margin-top: 44px; padding: 34px 36px; background: var(--navy); color: var(--paper); }
+  .tn-next h3 { margin: 0; font-size: clamp(21px, 2.2vw, 26px); line-height: 1.25; font-weight: 700; letter-spacing: -0.015em; color: var(--paper); }
+  .tn-next p { margin: 12px 0 0; font-size: 15.5px; line-height: 1.65; font-weight: 300; color: rgba(248,250,252,0.82); max-width: 36em; }
+  .tn-next .tn-as-btn { margin-top: 24px; text-decoration: none; }
+  .tn-next .contact { margin-top: 18px; font-size: 14px; color: rgba(248,250,252,0.7); }
+  .tn-next .contact a { color: var(--teal); font-weight: 600; }
+  .tn-sendnote { margin: 20px 0 0; padding: 14px 16px; background: rgba(255,170,92,0.12); border-left: 3px solid #FFAA5C; font-size: 14px; line-height: 1.55; color: var(--navy); }
+  .tn-sendnote[hidden] { display: none; }
+  .tn-disclaimer { margin: 28px 0 0; font-size: 13px; line-height: 1.6; color: var(--body); }
+  .tn-restart { font: inherit; border: 0; background: none; padding: 0; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--navy); border-bottom: 1px solid var(--teal); }
+
+  @media (max-width: 900px) {
+    .tn-as-head { padding: 64px 0 104px; }
+    .tn-as-card { margin: -56px 20px 0; padding: 36px 28px 40px; }
+    .tn-score { margin: -36px -28px 0; padding: 36px 28px 32px; }
+    .tn-next { padding: 28px 24px; }
+    .tn-as-body { padding-bottom: 64px; }
+  }
+  @media (max-width: 600px) {
+    .tn-as-card { margin: -56px 0 0; padding: 28px 18px 32px; }
+    .tn-score { margin: -28px -18px 0; padding: 30px 18px 28px; }
+    .tn-fields { grid-template-columns: 1fr; }
+    .tn-opt { padding: 14px 14px; gap: 12px; }
+    .tn-opt .t { font-size: 15.5px; }
+    .tn-as-btn { padding: 15px 20px; }
+    .tn-nav .tn-as-btn { flex: 1; justify-content: center; }
+    .tn-next .tn-as-btn { width: 100%; justify-content: center; text-align: center; }
+    .tn-scale-lbl { font-size: 10px; }
+    .tn-areas li { grid-template-columns: 36px 1fr; gap: 4px 12px; padding: 18px 16px; }
+    .tn-areas li::before { width: 30px; height: 30px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<header class="tn-header">
+  <div class="tn-wrap">
+    <a class="tn-logo" href="../">
+      <img src="../assets/tsebo-nexus-mark.png" alt="Tsebo Nexus" width="40" height="40">
+      <span><span class="l1">TSEBO</span><span class="l2">NEXUS</span></span>
+    </a>
+    <nav class="tn-nav-links">
+      <a href="../#approach">What we do</a>
+      <a href="../#industries">Industries</a>
+      <a href="../insights/">Insights</a>
+      <a href="../#approach">About</a>
+      <a href="../#cta">Contact</a>
+    </nav>
+    <div class="tn-nav-cta">
+      <a class="tn-btn" href="./" aria-current="page"><span class="tn-cta-long">Free Risk Assessment</span><span class="tn-cta-short">Free Assessment</span> <span>→</span></a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="tn-as-head">
+  <div class="tn-wrap">
+    <div class="tn-eyebrow">Cyber Readiness Assessment</div>
+    <h1>How exposed is your business?</h1>
+    <p>Answer 10 quick questions about how your business handles people, devices, data and incidents. You'll get an instant cyber readiness score out of 100 and the three areas that would make the biggest difference.</p>
+    <div class="tn-as-meta"><span>10 questions</span><span>About 3 minutes</span><span>Free, no obligation</span></div>
+  </div>
+</section>
+
+<section class="tn-as-body">
+  <div class="tn-as-card">
+    <form class="tn-as-form" id="tn-assess" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="REPLACE_WITH_KEY">
+      <input type="hidden" name="subject" value="Cyber Readiness Assessment (no-JS submission)">
+      <input type="checkbox" name="botcheck" class="tn-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="tn-progress" aria-live="polite">
+        <span class="lbl" id="tn-prog-lbl">Question 1 of 10</span>
+        <span class="bar"><i id="tn-prog-bar"></i></span>
+      </div>
+
+      <!-- Questions: data-points are the scores from "Cyber Readiness Questions.docx"; 10 × 10 = 100. -->
+      <fieldset class="tn-q" data-area="Employee Cyber Awareness" data-advice="Your team is your first line of defence. Short, regular awareness training with phishing refreshers makes it far harder for criminals to trick someone into clicking, opening or sharing.">
+        <legend><span class="area">1 · Employee Cyber Awareness</span><span class="ask">How regularly does your business provide cybersecurity awareness training to employees?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q1" value="Never" data-points="0" required><span class="k">A</span><span class="t">Never</span></label>
+          <label class="tn-opt"><input type="radio" name="q1" value="Only when something goes wrong" data-points="2"><span class="k">B</span><span class="t">Only when something goes wrong</span></label>
+          <label class="tn-opt"><input type="radio" name="q1" value="Occasionally" data-points="5"><span class="k">C</span><span class="t">Occasionally</span></label>
+          <label class="tn-opt"><input type="radio" name="q1" value="At least once a year" data-points="8"><span class="k">D</span><span class="t">At least once a year</span></label>
+          <label class="tn-opt"><input type="radio" name="q1" value="Regularly, with refreshers and phishing awareness" data-points="10"><span class="k">E</span><span class="t">Regularly, with refreshers and phishing awareness</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Multi-Factor Authentication" data-advice="Turn on MFA for email, Microsoft 365 or Google Workspace, banking and cloud services. It is one of the most effective low-cost controls a business can put in place.">
+        <legend><span class="area">2 · Multi-Factor Authentication</span><span class="ask">Does your business use Multi-Factor Authentication (MFA) on important accounts such as email, Microsoft 365/Google Workspace, banking and cloud services?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q2" value="No MFA" data-points="0" required><span class="k">A</span><span class="t">No MFA</span></label>
+          <label class="tn-opt"><input type="radio" name="q2" value="Only on some accounts" data-points="4"><span class="k">B</span><span class="t">Only on some accounts</span></label>
+          <label class="tn-opt"><input type="radio" name="q2" value="Most important accounts" data-points="7"><span class="k">C</span><span class="t">Most important accounts</span></label>
+          <label class="tn-opt"><input type="radio" name="q2" value="All important accounts" data-points="10"><span class="k">D</span><span class="t">All important accounts</span></label>
+          <label class="tn-opt"><input type="radio" name="q2" value="All important accounts, with stronger/phishing-resistant options where practical" data-points="10"><span class="k">E</span><span class="t">All important accounts, with stronger/phishing-resistant options where practical</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Password Security" data-advice="Use strong, unique passwords for every important account, kept in a business password manager and backed up by MFA.">
+        <legend><span class="area">3 · Password Security</span><span class="ask">How does your business manage passwords?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q3" value="Employees reuse passwords / no formal approach" data-points="0" required><span class="k">A</span><span class="t">Employees reuse passwords / no formal approach</span></label>
+          <label class="tn-opt"><input type="radio" name="q3" value="We encourage strong passwords" data-points="4"><span class="k">B</span><span class="t">We encourage strong passwords</span></label>
+          <label class="tn-opt"><input type="radio" name="q3" value="We use unique passwords for important accounts" data-points="6"><span class="k">C</span><span class="t">We use unique passwords for important accounts</span></label>
+          <label class="tn-opt"><input type="radio" name="q3" value="We use a password manager or formal password controls" data-points="8"><span class="k">D</span><span class="t">We use a password manager or formal password controls</span></label>
+          <label class="tn-opt"><input type="radio" name="q3" value="Strong unique passwords + password manager + MFA" data-points="10"><span class="k">E</span><span class="t">Strong unique passwords + password manager + MFA</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Endpoint Protection" data-advice="Free or basic antivirus is no longer enough. Business-grade, centrally managed endpoint protection detects and stops threats before they spread across your devices.">
+        <legend><span class="area">4 · Antivirus / Endpoint Protection</span><span class="ask">How are your business computers and laptops protected against malware and other threats?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q4" value="We don't know" data-points="0" required><span class="k">A</span><span class="t">We don't know</span></label>
+          <label class="tn-opt"><input type="radio" name="q4" value="Basic/free antivirus only" data-points="3"><span class="k">B</span><span class="t">Basic/free antivirus only</span></label>
+          <label class="tn-opt"><input type="radio" name="q4" value="Antivirus is installed and updated" data-points="6"><span class="k">C</span><span class="t">Antivirus is installed and updated</span></label>
+          <label class="tn-opt"><input type="radio" name="q4" value="Business-grade endpoint protection is centrally managed" data-points="8"><span class="k">D</span><span class="t">Business-grade endpoint protection is centrally managed</span></label>
+          <label class="tn-opt"><input type="radio" name="q4" value="Business-grade protection + monitoring/management + regular review" data-points="10"><span class="k">E</span><span class="t">Business-grade protection + monitoring/management + regular review</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Software Updates" data-advice="Unpatched software is one of the most common ways attackers get in. A managed patching process keeps every device and application up to date without relying on memory.">
+        <legend><span class="area">5 · Software Updates</span><span class="ask">How does your business handle software and operating-system updates?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q5" value="We don't have a process" data-points="0" required><span class="k">A</span><span class="t">We don't have a process</span></label>
+          <label class="tn-opt"><input type="radio" name="q5" value="Employees update when they remember" data-points="3"><span class="k">B</span><span class="t">Employees update when they remember</span></label>
+          <label class="tn-opt"><input type="radio" name="q5" value="Most devices are kept updated" data-points="6"><span class="k">C</span><span class="t">Most devices are kept updated</span></label>
+          <label class="tn-opt"><input type="radio" name="q5" value="Updates are regularly monitored/managed" data-points="8"><span class="k">D</span><span class="t">Updates are regularly monitored/managed</span></label>
+          <label class="tn-opt"><input type="radio" name="q5" value="We have a documented/managed patching process" data-points="10"><span class="k">E</span><span class="t">We have a documented/managed patching process</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Backup &amp; Recovery" data-advice="Make sure critical data is backed up automatically, protected from ransomware, and that the backups can actually be restored when you need them.">
+        <legend><span class="area">6 · Data Backup</span><span class="ask">Does your business regularly back up important information such as financial records, customer information and business documents?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q6" value="No backup" data-points="0" required><span class="k">A</span><span class="t">No backup</span></label>
+          <label class="tn-opt"><input type="radio" name="q6" value="Some files are manually copied occasionally" data-points="3"><span class="k">B</span><span class="t">Some files are manually copied occasionally</span></label>
+          <label class="tn-opt"><input type="radio" name="q6" value="We have regular backups" data-points="6"><span class="k">C</span><span class="t">We have regular backups</span></label>
+          <label class="tn-opt"><input type="radio" name="q6" value="Backups are automated and protected" data-points="8"><span class="k">D</span><span class="t">Backups are automated and protected</span></label>
+          <label class="tn-opt"><input type="radio" name="q6" value="Backups are automated, protected and regularly tested for recovery" data-points="10"><span class="k">E</span><span class="t">Backups are automated, protected and regularly tested for recovery</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Access Management" data-advice="Remove a leaver's access the day they go. A documented offboarding process closes a door that is very often left open.">
+        <legend><span class="area">7 · Access to Company Information</span><span class="ask">When an employee leaves your business, how quickly is their access to company systems removed?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q7" value="We don't have a process" data-points="0" required><span class="k">A</span><span class="t">We don't have a process</span></label>
+          <label class="tn-opt"><input type="radio" name="q7" value="We do it when we remember" data-points="3"><span class="k">B</span><span class="t">We do it when we remember</span></label>
+          <label class="tn-opt"><input type="radio" name="q7" value="Usually within a few days" data-points="5"><span class="k">C</span><span class="t">Usually within a few days</span></label>
+          <label class="tn-opt"><input type="radio" name="q7" value="Access is normally removed immediately" data-points="8"><span class="k">D</span><span class="t">Access is normally removed immediately</span></label>
+          <label class="tn-opt"><input type="radio" name="q7" value="We have a documented offboarding process" data-points="10"><span class="k">E</span><span class="t">We have a documented offboarding process</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Phishing &amp; Scam Protection" data-advice="Teach staff to recognise and report suspicious emails, WhatsApp messages and payment requests, and keep the habit sharp with regular exercises.">
+        <legend><span class="area">8 · Phishing &amp; Scam Protection</span><span class="ask">Would your employees know what to do if they received a suspicious email, WhatsApp message or payment request?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q8" value="Probably not" data-points="0" required><span class="k">A</span><span class="t">Probably not</span></label>
+          <label class="tn-opt"><input type="radio" name="q8" value="Some employees might recognise it" data-points="3"><span class="k">B</span><span class="t">Some employees might recognise it</span></label>
+          <label class="tn-opt"><input type="radio" name="q8" value="Most employees know basic warning signs" data-points="6"><span class="k">C</span><span class="t">Most employees know basic warning signs</span></label>
+          <label class="tn-opt"><input type="radio" name="q8" value="Employees are trained to identify and report suspicious activity" data-points="8"><span class="k">D</span><span class="t">Employees are trained to identify and report suspicious activity</span></label>
+          <label class="tn-opt"><input type="radio" name="q8" value="We conduct regular awareness/phishing exercises" data-points="10"><span class="k">E</span><span class="t">We conduct regular awareness/phishing exercises</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Incident Response" data-advice="Know exactly who to call and what to do if you are hacked. A simple, tested incident response plan shortens downtime and limits the damage.">
+        <legend><span class="area">9 · Incident Response</span><span class="ask">If your business was hacked tomorrow, would you know what to do?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q9" value="No idea" data-points="0" required><span class="k">A</span><span class="t">No idea</span></label>
+          <label class="tn-opt"><input type="radio" name="q9" value="We would probably call our IT person" data-points="3"><span class="k">B</span><span class="t">We would probably call our IT person</span></label>
+          <label class="tn-opt"><input type="radio" name="q9" value="We have some procedures" data-points="5"><span class="k">C</span><span class="t">We have some procedures</span></label>
+          <label class="tn-opt"><input type="radio" name="q9" value="We have an incident response plan" data-points="8"><span class="k">D</span><span class="t">We have an incident response plan</span></label>
+          <label class="tn-opt"><input type="radio" name="q9" value="We have a documented plan and regularly review/test it" data-points="10"><span class="k">E</span><span class="t">We have a documented plan and regularly review/test it</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="tn-q" data-area="Data Protection &amp; POPIA" data-advice="Put documented security controls around the personal information you hold for customers, staff and suppliers, and review them regularly.">
+        <legend><span class="area">10 · Data Protection &amp; POPIA</span><span class="ask">Does your business have processes for protecting personal information belonging to customers, employees and suppliers?</span></legend>
+        <div class="tn-opts">
+          <label class="tn-opt"><input type="radio" name="q10" value="No formal process" data-points="0" required><span class="k">A</span><span class="t">No formal process</span></label>
+          <label class="tn-opt"><input type="radio" name="q10" value="We are aware of POPIA but haven't implemented much" data-points="3"><span class="k">B</span><span class="t">We are aware of POPIA but haven't implemented much</span></label>
+          <label class="tn-opt"><input type="radio" name="q10" value="We have some controls" data-points="5"><span class="k">C</span><span class="t">We have some controls</span></label>
+          <label class="tn-opt"><input type="radio" name="q10" value="We have documented procedures and security measures" data-points="8"><span class="k">D</span><span class="t">We have documented procedures and security measures</span></label>
+          <label class="tn-opt"><input type="radio" name="q10" value="POPIA/privacy responsibilities are actively managed and reviewed" data-points="10"><span class="k">E</span><span class="t">POPIA/privacy responsibilities are actively managed and reviewed</span></label>
+        </div>
+      </fieldset>
+
+      <div class="tn-step-contact">
+        <h2>Last step: tell us about your business</h2>
+        <p>Your score appears on the next screen. A Tsebo Nexus advisor can then walk you through it, free of charge.</p>
+        <div class="tn-fields">
+          <div class="tn-field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="tn-field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
+          <div class="tn-field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="tn-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\-]{9,}"></div>
+          <div class="tn-field"><label for="f-size">Number of employees <small>(optional)</small></label>
+            <select id="f-size" name="employees"><option value="">Select…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select>
+          </div>
+        </div>
+        <label class="tn-consent"><input type="checkbox" name="consent" value="Yes" required><span>I agree that Tsebo Nexus may use these details to contact me about my results. We protect your information in line with POPIA and never share it.</span></label>
+      </div>
+
+      <div class="tn-nav">
+        <button type="button" class="tn-back" data-back>← Back</button>
+        <button type="button" class="tn-as-btn" data-next disabled>Next <span>→</span></button>
+        <button type="submit" class="tn-as-btn" data-submit>See My Results <span>→</span></button>
+      </div>
+    </form>
+
+    <div class="tn-result" id="tn-result" hidden tabindex="-1">
+      <div class="tn-score">
+        <div class="eyebrow">Your Tsebo Nexus Cyber Readiness Score</div>
+        <div class="row">
+          <div class="num"><span id="r-score">0</span><small>/ 100</small></div>
+          <div class="tn-band" id="r-band"></div>
+        </div>
+        <div class="tn-scale" aria-hidden="true"><span></span><span></span><span></span><span></span><i class="pin" id="r-pin" style="left:0"></i></div>
+        <div class="tn-scale-lbl" aria-hidden="true"><span>High risk</span><span>Developing</span><span>Moderate</span><span>Strong</span></div>
+        <p class="summary" id="r-summary"></p>
+      </div>
+
+      <div class="tn-res-sec">
+        <h3 id="r-areas-h">Your top 3 improvement areas</h3>
+        <ol class="tn-areas" id="r-areas"></ol>
+      </div>
+
+      <div class="tn-res-sec">
+        <h3>How Tsebo Nexus can help</h3>
+        <p class="tn-action">Recommended next step: <strong id="r-action"></strong></p>
+        <ul class="tn-services" id="r-services"></ul>
+      </div>
+
+      <div class="tn-next">
+        <h3>Book your FREE 15-minute Cyber Readiness Consultation</h3>
+        <p>We'll go through your score together and identify practical, affordable steps your business can take to improve its cybersecurity. No jargon, no pressure.</p>
+        <a class="tn-as-btn" id="r-book" href="https://wa.me/27693389748" target="_blank" rel="noopener">Book My Free Consultation <span>→</span></a>
+        <div class="contact">Or reach us directly: <a href="tel:+27693389748">069 338 9748</a> &nbsp;·&nbsp; <a href="mailto:info@tsebonexus.co.za">info@tsebonexus.co.za</a></div>
+      </div>
+      <p class="tn-sendnote" id="r-sendnote" hidden>We couldn't send your results to our team automatically. Tap <strong>Book My Free Consultation</strong> above to share your score with us on WhatsApp, or email info@tsebonexus.co.za.</p>
+
+      <p class="tn-disclaimer">This is an indicative self-assessment based on your answers, not a full security audit. Cybersecurity is an ongoing process, not a once-off certification. <button type="button" class="tn-restart" id="r-restart">Retake the assessment</button></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="tn-footer">
+  <div class="tn-wrap">
+    <div class="row">
+      <a class="tn-logo" href="../">
+        <img src="../assets/tsebo-nexus-mark.png" alt="Tsebo Nexus" width="38" height="38">
+        <span><span class="l1">TSEBO</span><span class="l2">NEXUS</span></span>
+      </a>
+      <nav>
+        <a href="../#approach">What we do</a>
+        <a href="../#industries">Industries</a>
+        <a href="../insights/">Insights</a>
+        <a href="../#approach">About</a>
+        <a href="../#cta">Contact</a>
+      </nav>
+      <div class="contact">
+        <a href="tel:+27693389748">069 338 9748</a>
+        <a href="mailto:info@tsebonexus.co.za">info@tsebonexus.co.za</a>
+      </div>
+    </div>
+    <div class="legal">
+      <div>© 2026 Tsebo Nexus. All rights reserved.</div>
+      <div>Security today. Opportunity tomorrow.</div>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  // Web3Forms access key: create one free at web3forms.com using info@tsebonexus.co.za (submissions are
+  // emailed to the address the key was created with). Also set it in the hidden access_key input above.
+  var WEB3FORMS_KEY = "REPLACE_WITH_KEY";
+
+  // Score bands and recommended services, from "Cyber Readiness Questions.docx".
+  var BANDS = [
+    { min: 80, id: "strong", label: "Strong",
+      summary: "Your business has a strong cybersecurity foundation. The next step is maintaining and continuously improving it, because threats keep changing.",
+      action: "Ongoing Cyber Health Checks",
+      services: ["Ongoing monitoring & advisory", "Backup & recovery testing", "Phishing awareness refreshers", "Quarterly cyber health checks", "Policy review"] },
+    { min: 60, id: "moderate", label: "Moderate",
+      summary: "Your business has several important controls in place, but there are areas that could still increase your exposure to cybercrime, data loss or business interruption.",
+      action: "Cyber Resilience Review",
+      services: ["Security assessment", "Endpoint optimisation", "Backup testing", "Phishing awareness", "Data loss prevention (DLP)", "Policy review", "Ongoing monitoring & advisory"] },
+    { min: 40, id: "developing", label: "Developing",
+      summary: "You have some cybersecurity controls in place, but important gaps may remain that could leave your business exposed.",
+      action: "Cybersecurity Improvement Plan",
+      services: ["Awareness training", "Endpoint protection", "Backup & recovery", "Multi-factor authentication", "Security policies", "Quarterly cyber health checks"] },
+    { min: 0, id: "high", label: "High Risk",
+      summary: "Your business may have significant cybersecurity gaps. The good news: most of them can be closed quickly with the right priorities.",
+      action: "Priority Cybersecurity Review",
+      services: ["Cyber awareness training", "Endpoint protection", "MFA implementation", "Backup assessment", "Security assessment", "POPIA security controls", "Incident-response planning"] }
+  ];
+
+  var form = document.getElementById("tn-assess");
+  var result = document.getElementById("tn-result");
+  var steps = Array.prototype.slice.call(form.querySelectorAll(".tn-q")).concat([form.querySelector(".tn-step-contact")]);
+  var questions = steps.slice(0, -1);
+  var btnBack = form.querySelector("[data-back]");
+  var btnNext = form.querySelector("[data-next]");
+  var btnSubmit = form.querySelector("[data-submit]");
+  var progLbl = document.getElementById("tn-prog-lbl");
+  var progBar = document.getElementById("tn-prog-bar");
+  var current = 0, advanceTimer = null;
+
+  form.classList.add("js");
+  form.querySelector('[name="access_key"]').value = WEB3FORMS_KEY;
+
+  function answered(i) { return !!steps[i].querySelector("input:checked"); }
+
+  function show(i) {
+    current = i;
+    steps.forEach(function (s, n) { s.classList.toggle("is-active", n === i); });
+    var onContact = i === steps.length - 1;
+    btnBack.hidden = i === 0;
+    btnNext.style.display = onContact ? "none" : "";
+    btnSubmit.style.display = onContact ? "" : "none";
+    btnNext.disabled = !onContact && !answered(i);
+    progLbl.textContent = onContact ? "Last step" : "Question " + (i + 1) + " of " + questions.length;
+    progBar.style.width = (onContact ? 100 : (i / questions.length) * 100) + "%";
+  }
+
+  function scrollToCard() {
+    var top = form.parentNode.getBoundingClientRect().top + window.pageYOffset - 16;
+    if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+  }
+
+  btnNext.addEventListener("click", function () { if (answered(current)) { show(current + 1); scrollToCard(); } });
+  btnBack.addEventListener("click", function () { clearTimeout(advanceTimer); show(Math.max(0, current - 1)); });
+
+  // Picking an answer moves on automatically after a short pause, so the selection is visible first.
+  form.addEventListener("change", function (e) {
+    if (e.target.type !== "radio") return;
+    btnNext.disabled = false;
+    clearTimeout(advanceTimer);
+    var from = current;
+    advanceTimer = setTimeout(function () { if (current === from) { show(from + 1); scrollToCard(); } }, 320);
+  });
+
+  function score() {
+    var items = questions.map(function (q, i) {
+      var input = q.querySelector("input:checked");
+      return {
+        n: i + 1,
+        area: q.getAttribute("data-area"),
+        advice: q.getAttribute("data-advice"),
+        answer: input.value,
+        points: parseInt(input.getAttribute("data-points"), 10)
+      };
+    });
+    var total = items.reduce(function (s, it) { return s + it.points; }, 0);
+    var band = BANDS.filter(function (b) { return total >= b.min; })[0];
+    // Lowest-scoring answers first; ties keep question order. Full marks are not a gap.
+    var gaps = items.filter(function (it) { return it.points < 10; })
+      .sort(function (a, b) { return a.points - b.points || a.n - b.n; })
+      .slice(0, 3);
+    return { items: items, total: total, band: band, gaps: gaps };
+  }
+
+  function field(name) { var el = form.elements[name]; return el ? el.value.trim() : ""; }
+
+  function send(r) {
+    if (!WEB3FORMS_KEY || WEB3FORMS_KEY === "REPLACE_WITH_KEY") return Promise.reject(new Error("Web3Forms key not set"));
+    var payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: "Cyber Readiness Assessment: " + field("company") + " scored " + r.total + "/100 (" + r.band.label + ")",
+      from_name: "Tsebo Nexus website",
+      botcheck: form.elements.botcheck.checked,
+      name: field("name"),
+      company: field("company"),
+      email: field("email"),
+      phone: field("phone"),
+      employees: field("employees") || "Not given",
+      "POPIA consent": "Yes",
+      "Score": r.total + " / 100",
+      "Risk band": r.band.label,
+      "Top improvement areas": r.gaps.map(function (g) { return g.area; }).join(", ") || "None",
+      "Recommended next step": r.band.action
+    };
+    r.items.forEach(function (it) { payload["Q" + it.n + " " + it.area] = it.answer + " (" + it.points + "/10)"; });
+
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 10000) : null;
+    return fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (res) {
+      clearTimeout(timer);
+      return res.json().then(function (json) { if (!res.ok || !json.success) throw new Error(json.message || res.status); });
+    });
+  }
+
+  function el(tag, text) { var e = document.createElement(tag); if (text != null) e.textContent = text; return e; }
+
+  function render(r) {
+    document.getElementById("r-score").textContent = r.total;
+    var band = document.getElementById("r-band");
+    band.className = "tn-band " + r.band.id;
+    band.textContent = r.band.label;
+    document.getElementById("r-summary").textContent = r.band.summary;
+    document.getElementById("r-action").textContent = r.band.action;
+
+    var areas = document.getElementById("r-areas");
+    areas.innerHTML = "";
+    var head = document.getElementById("r-areas-h");
+    if (r.gaps.length) {
+      head.textContent = r.gaps.length === 3 ? "Your top 3 improvement areas" : "Your improvement areas";
+      r.gaps.forEach(function (g) {
+        var li = el("li"), s = el("strong", g.area);
+        s.appendChild(el("em", g.points + "/10"));
+        li.appendChild(s);
+        li.appendChild(el("p", g.advice));
+        areas.appendChild(li);
+      });
+      areas.hidden = false;
+    } else {
+      head.textContent = "Your improvement areas";
+      areas.hidden = true;
+      var none = areas.parentNode.querySelector(".tn-none") || areas.parentNode.appendChild(el("p"));
+      none.className = "tn-none";
+      none.textContent = "You scored full marks on every question. The focus now is keeping it that way: regular reviews, tested backups and staff refreshers as threats evolve.";
+    }
+    if (r.gaps.length) { var old = areas.parentNode.querySelector(".tn-none"); if (old) old.remove(); }
+
+    var services = document.getElementById("r-services");
+    services.innerHTML = "";
+    r.band.services.forEach(function (s) { services.appendChild(el("li", s)); });
+
+    var msg = "Hi Tsebo Nexus, I just completed the Cyber Readiness Assessment for " + (field("company") || "my business") +
+      ". My score was " + r.total + "/100 (" + r.band.label + "). I'd like to book my free 15-minute consultation.";
+    document.getElementById("r-book").href = "https://wa.me/27693389748?text=" + encodeURIComponent(msg);
+
+    var pin = document.getElementById("r-pin");
+    pin.style.left = "0";
+    requestAnimationFrame(function () { requestAnimationFrame(function () { pin.style.left = Math.min(99.5, Math.max(0.5, r.total)) + "%"; }); });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var contact = steps[steps.length - 1];
+    var invalid = Array.prototype.filter.call(contact.querySelectorAll("input, select"), function (f) { return !f.checkValidity(); });
+    if (invalid.length) { invalid[0].reportValidity(); return; }
+    if (!questions.every(function (q, i) { return answered(i); })) {
+      show(questions.findIndex(function (q, i) { return !answered(i); }));
+      return;
+    }
+
+    var r = score();
+    btnSubmit.disabled = true;
+    btnSubmit.firstChild.textContent = "Calculating… ";
+    var note = document.getElementById("r-sendnote");
+
+    function reveal(sent) {
+      render(r);
+      note.hidden = sent;
+      form.hidden = true;
+      result.hidden = false;
+      scrollToCard();
+      result.focus({ preventScroll: true });
+    }
+    send(r).then(function () { reveal(true); }, function (err) { console.warn("Assessment not sent:", err); reveal(false); });
+  });
+
+  document.getElementById("r-restart").addEventListener("click", function () {
+    form.reset();
+    btnSubmit.disabled = false;
+    btnSubmit.firstChild.textContent = "See My Results ";
+    result.hidden = true;
+    form.hidden = false;
+    show(0);
+    scrollToCard();
+  });
+
+  show(0);
+})();
+</script>
+</body>
+</html>
