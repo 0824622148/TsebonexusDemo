@@ -2,7 +2,7 @@
 
 Static single-page site for **https://tsebo-nexus.co.za** (GitHub Pages, DNS at GoDaddy; moved there
 8 Oct 2026 from tsebonexus.co.za, which is on a Plesk host we don't control). The contact email is still
-`info@tsebonexus.co.za`. `site/` is the whole
+`thabo.lebina@tsebonexus.co.za`. `site/` is the whole
 deployable: a Claude Design static export (`index.html` + `support.js`/`image-slot.js` runtime), optimised
 images in `uploads/`, partner logos in `assets/`, favicon set, `manifest.json` and an IIS `web.config`.
 
@@ -28,7 +28,7 @@ their recommended services are in the `BANDS` array in the script.
 
 Visitors give their contact details before seeing their score. The submission is emailed via
 [Web3Forms](https://web3forms.com): set `WEB3FORMS_KEY` at the top of the script (and the hidden
-`access_key` input, used when JS is off) to a key created with **info@tsebonexus.co.za**. Leads go to
+`access_key` input, used when JS is off) to a key created with **thabo.lebina@tsebonexus.co.za**. Leads go to
 whichever address created the key. Results still show if sending fails, and the visitor is then pointed to
 the WhatsApp consultation button, which is prefilled with their score.
 
