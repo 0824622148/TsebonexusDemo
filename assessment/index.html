@@ -309,7 +309,7 @@
           <div class="tn-field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
           <div class="tn-field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
           <div class="tn-field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="tn-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\-]{9,}"></div>
+          <div class="tn-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +\(\)\-]{9,}"></div>
           <div class="tn-field"><label for="f-size">Number of employees <small>(optional)</small></label>
             <select id="f-size" name="employees"><option value="">Select…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select>
           </div>
@@ -484,7 +484,6 @@
       access_key: WEB3FORMS_KEY,
       subject: "Cyber Readiness Assessment: " + field("company") + " scored " + r.total + "/100 (" + r.band.label + ")",
       from_name: "Tsebo Nexus website",
-      botcheck: form.elements.botcheck.checked,
       name: field("name"),
       company: field("company"),
       email: field("email"),
@@ -497,6 +496,8 @@
       "Recommended next step": r.band.action
     };
     r.items.forEach(function (it) { payload["Q" + it.n + " " + it.area] = it.answer + " (" + it.points + "/10)"; });
+    // Honeypot: only sent when a bot ticks it (Web3Forms then drops the submission).
+    if (form.elements.botcheck.checked) payload.botcheck = true;
 
     var ctrl = window.AbortController ? new AbortController() : null;
     var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 10000) : null;
