@@ -480,22 +480,29 @@
 
   function send(r) {
     if (!WEB3FORMS_KEY || WEB3FORMS_KEY === "REPLACE_WITH_KEY") return Promise.reject(new Error("Web3Forms key not set"));
+    // Plain contact-form shape (name/email/phone/message): Web3Forms' spam filter rejected the
+    // earlier one-field-per-answer payload "for security reasons", while this shape is accepted.
+    var lines = [
+      "Score: " + r.total + "/100 (" + r.band.label + ")",
+      "Recommended next step: " + r.band.action,
+      "Top improvement areas: " + (r.gaps.map(function (g) { return g.area; }).join(", ") || "None"),
+      "",
+      "Company: " + field("company"),
+      "Employees: " + (field("employees") || "Not given"),
+      "POPIA consent: Yes",
+      "",
+      "Answers:"
+    ];
+    r.items.forEach(function (it) { lines.push(it.n + ". " + it.area + ": " + it.answer + " (" + it.points + "/10)"); });
     var payload = {
       access_key: WEB3FORMS_KEY,
       subject: "Cyber Readiness Assessment: " + field("company") + " scored " + r.total + "/100 (" + r.band.label + ")",
       from_name: "Tsebo Nexus website",
       name: field("name"),
-      company: field("company"),
       email: field("email"),
       phone: field("phone"),
-      employees: field("employees") || "Not given",
-      "POPIA consent": "Yes",
-      "Score": r.total + " / 100",
-      "Risk band": r.band.label,
-      "Top improvement areas": r.gaps.map(function (g) { return g.area; }).join(", ") || "None",
-      "Recommended next step": r.band.action
+      message: lines.join("\n")
     };
-    r.items.forEach(function (it) { payload["Q" + it.n + " " + it.area] = it.answer + " (" + it.points + "/10)"; });
     // Honeypot: only sent when a bot ticks it (Web3Forms then drops the submission).
     if (form.elements.botcheck.checked) payload.botcheck = true;
 
